@@ -2,8 +2,36 @@
 /* CSS Document */
 
 body {
-		background-color:#fbc42b;
+		background-color: orange;
 	}
+
+.speechBubble {
+	height: 500px;
+	width: 500px;
+	background-image: url('JPG/Speech Bubble.png');
+	padding-left: 150px;
+	padding-top: 100px;
+	background-repeat: no-repeat;
+}
+
+.speechBubble div {
+	width: 300px;
+	height: 300px;
+}
+
+.mainLogo {
+	margin: 150px;
+}
+
+.bee {
+	margin-right: 100px;
+}
+
+.bee tr td{
+	height: 500px;
+	width: 500px;
+}
+
 #tfnewsearch{
 		float:middle;
 		padding:20px;
