@@ -9,6 +9,7 @@ body {
 	height: 500px;
 	width: 500px;
 	background-image: url('JPG/Speech Bubble.png');
+	margin-top: 100px;
 	padding-left: 150px;
 	padding-top: 100px;
 	background-repeat: no-repeat;
