@@ -28,19 +28,82 @@
  
         <div id="tab4" class="tab">
     </div>
+</div>
+</div>
+
 
 <div align="center" class="logo"><img src="JPG/Hive Logo.jpg" HEIGHT="300" WIDTH="600" BORDER="0"></div>
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 <!-- CSS styles for standard search box -->
-</head>
+
 <body>
 	<!-- HTML for SEARCH BAR -->
 	<div id="tfheader" align="center">
 		<form id="tfnewsearch" method="get" action="">
 		        <input type="text" class="tftextinput" name="q" size="50" maxlength="120" placeholder="Search Songs"><input type="submit" value="SEARCH" class="tfbutton">
 		</form>
-	<div class="tfclear"></div>
+    	<div class="tfclear"></div>
 	</div>
+    
+    <div align="center">
+        <input type="range"  min="30" max="250" value="80" onchange="showValue(this.value)"/>
+        Tempo: <span id="range">80</span> bpm
+    </div>
+
+    <div align="center">
+        <input type="range"  min="1" max="100" value="60" onchange="showValue(this.value)"/>
+        Loudness: <span id="range">60</span> %
+    </div>
+
+<table id="dropdown" align="center">
+    <tr>
+        <td align="center">Genre</td>
+        <td align="center">Instruments</td>
+        <td align="center">
+    </tr>
+    <tr>
+        <td align="center">
+            <form align="left">
+                <input type="checkbox" name="genre" value="classic">Classic<br>
+                <input type="checkbox" name="genre" value="rock">Rock<br> 
+                <input type="checkbox" name="genre" value="pop">Pop<br> 
+                <input type="checkbox" name="genre" value="rap">Rap/Hiphop<br> 
+                <input type="checkbox" name="genre" value="edm">Electronic 
+            </form>
+        </td>
+        <td align="center">
+            <form align="left">
+                <input type="checkbox" name="instrument" value="guitar">Guitar<br>
+                <input type="checkbox" name="instrument" value="drums">Drums<br> 
+                <input type="checkbox" name="instrument" value="bass">Bass<br> 
+                <input type="checkbox" name="instrument" value="piano">Piano<br> 
+                <input type="checkbox" name="instrument" value="violin">Vionlin 
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select>
+                <option value="classic">Classic</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="rap">Rap/Hiphop</option>
+                <option value="edm">Electronic</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<br>
+<div align="center">
+    <form>
+        <input type="radio" name="sex" value="male">Male
+        <input type="radio" name="sex" value="female">Female
+    </form>
+</div>
+
+
+<script type="text/javascript" src="js/_main.js"></script>
+
 </body>
 </html>
 

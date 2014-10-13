@@ -5,6 +5,14 @@ body {
 		background-color: orange;
 	}
 
+.dropdown {
+
+}
+
+.dropdown tr td {
+	
+}
+
 .speechBubble {
 	height: 500px;
 	width: 500px;
@@ -13,6 +21,11 @@ body {
 	padding-left: 150px;
 	padding-top: 100px;
 	background-repeat: no-repeat;
+}
+
+.speechBubble div a:hover{
+	color: black;
+	text-decoration: underline;
 }
 
 .speechBubble div {
