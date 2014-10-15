@@ -73,7 +73,7 @@
                 <input type="checkbox" name="instrument" value="drums">Drums<br> 
                 <input type="checkbox" name="instrument" value="bass">Bass<br> 
                 <input type="checkbox" name="instrument" value="piano">Piano<br> 
-                <input type="checkbox" name="instrument" value="violin">Vionlin 
+                <input type="checkbox" name="instrument" value="violin">Violin 
             </form>
         </td>
         <td>
@@ -101,12 +101,21 @@
 <br>
 <div align="center">
     <form>
-        <input type="radio" name="sex" value="male">Male
-        <input type="radio" name="sex" value="female">Female
+        <input type="checkbox" name="sex" value="male">Male
+        <input type="checkbox" name="sex" value="female">Female
     </form>
 </div>
+<form id="tfnewsearch" method="get" action="ResultPage.html">
+    <div align="center">
+        <input type="submit" value="Get me the song!" class="tagbutton">
+    </div>
+</form>
 
-
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/skrollr.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init([]);
+</script>
 <script type="text/javascript" src="js/_main.js"></script>
 
 </body>
