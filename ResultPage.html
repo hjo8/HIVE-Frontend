@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/HIVE.css">
+  <title>HiVe</title>
+  <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<div class="tabs" align="right">
+    <ul class="topNavigation">
+        <li>[<a href="#tab1">about</a>]</li>
+        <li>[<a href="#tab2">discover</a>]</li>
+        <li>[<a href="#tab3">browse</a>]</li>
+        <li>[<a href="#tab4">tags</a>]</li>
+        <li>[<a href="#tab3">login</a>]</li>
+        <li>[<a href="#tab4">register</a>]</li>
+    </ul>
+</div>
+
+ 
+<div id="images"></div>
+ 
+<script>
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "bee",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
+</script>
+ 
+</body>
+</html>
