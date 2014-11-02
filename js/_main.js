@@ -41,3 +41,16 @@ function showTags() {
     }
     document.getElementById("demo").innerHTML = text;
 }
+
+$.ajax({
+    type: "GET",
+    url: "https://getJsonData",
+    dataType: "json",
+    success: processData,
+    error: function(){ alert("failed"); }
+});
+
+function processData(data)
+{
+    //do something with data
+}
