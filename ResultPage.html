@@ -25,41 +25,15 @@
 <table>
   <tr>
     <td>
-      <div class="hexagon">
-        <div id="song1">Song 1</div>
+      <div id="song1" class="hexagon">
+        <div>Song 1</div>
         <div class="face1"></div>
         <div class="face2"></div>
       </div>
     </td>
     <td>
-      <div class="hexagon">
-        <div id="song2">Song 2</div>
-        <div class="face1"></div>
-        <div class="face2"></div>
-      </div>
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>
-      <div class="hexagon">
-        <div id="song6">Song 6</div>
-        <div class="face1"></div>
-        <div class="face2"></div>
-      </div>
-    </td>
-    <td>
-      <div class="hexagon">
-        <div id="song0">Song 0</div>
-        <div class="face1"></div>
-        <div class="face2"></div>
-      </div>
-    </td>
-    <td>
-      <div class="hexagon">
-        <div id="song3">Song 3</div>
+      <div id="song2" class="hexagon">
+        <div>Song 2</div>
         <div class="face1"></div>
         <div class="face2"></div>
       </div>
@@ -70,15 +44,41 @@
 <table>
   <tr>
     <td>
-      <div class="hexagon">
-        <div id="song5">Song 5</div>
+      <div id="song6" class="hexagon">
+        <div>Song 6</div>
         <div class="face1"></div>
         <div class="face2"></div>
       </div>
     </td>
     <td>
-      <div class="hexagon">
-        <div id="song4">Song 4</div>
+      <div id="song0" class="hexagon">
+        <div>Song 0</div>
+        <div class="face1"></div>
+        <div class="face2"></div>
+      </div>
+    </td>
+    <td>
+      <div id="song3" class="hexagon">
+        <div>Song 3</div>
+        <div class="face1"></div>
+        <div class="face2"></div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <div id="song5" class="hexagon">
+        <div>Song 5</div>
+        <div class="face1"></div>
+        <div class="face2"></div>
+      </div>
+    </td>
+    <td>
+      <div id="song4" class="hexagon">
+        <div>Song 4</div>
         <div class="face1"></div>
         <div class="face2"></div>
       </div>
@@ -90,33 +90,6 @@
 
 <br>
 
-<div id="images" class="hexagon">
-  <!--include [style="background-image: url('http://i.imgur.com/IEiqEV0.jpg')"] url can be album art-->
-  HEXAGONS
-  <!--Include song name \n artist-->
-  <div class="face1"></div>
-  <div class="face2"></div>
-</div>
-<div id="images"></div>
-
-<script>
-(function() {
-  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  $.getJSON( flickerAPI, {
-    tags: "bee",
-    tagmode: "any",
-    format: "json"
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-        if ( i === 3 ) {
-          return false;
-        }
-      });
-    });
-})();
-</script>
 <script type="text/javascript" src="js/HEX.js"></script>
  
 </body>
