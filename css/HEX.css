@@ -59,3 +59,7 @@
   transform-origin: right top;
   transform: rotate(60deg) translate(110px, 0);
 }
+
+table {
+  margin-bottom: -150px;
+}
