@@ -42,6 +42,7 @@ function showTags() {
     document.getElementById("demo").innerHTML = text;
 }
 
+/**
 $.ajax({
     type: "GET",
     url: "https://getJsonData",
@@ -54,3 +55,4 @@ function processData(data)
 {
     //do something with data
 }
+*/
