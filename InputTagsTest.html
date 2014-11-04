@@ -72,10 +72,11 @@
 
 <form id="tfnewsearch" method="get" action="ResultPage.html">
     <div align="center">
-        <input type="submit" onclick="myFunction()" value="Get me the song!" class="tagbutton">
+        <input type="submit" onclick="getTags()" value="Get me the song!" class="tagbutton">
     </div>
 </form>
 
+<button onclick="getTags()">Get Tags</button>
 <button onclick="showTags()">Show Tags</button>
 
 <p id="demo"></p>
@@ -88,6 +89,7 @@
     var s = skrollr.init([]);
 </script>
 <script type="text/javascript" src="js/_main.js"></script>
+<script type="text/javascript" src="js/getTags.js"></script>
 
 </body>
 </html>

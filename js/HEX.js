@@ -26,13 +26,13 @@ $(function(){
 });
 */
 
-document.getElementById("song0").style.background = songAlbums[song0Album] + " center center";
-document.getElementById("song1").style.background = song1Album + " center center";
-document.getElementById("song2").style.background = song2Album + " center center";
-document.getElementById("song3").style.background = song3Album + " center center";
-document.getElementById("song4").style.background = song4Album + " center center";
-document.getElementById("song5").style.background = song5Album + " center center";
-document.getElementById("song6").style.background = song6Album + " center center";
+document.getElementById("song0").style.background = songAlbums['song0Album'] + " center center";
+document.getElementById("song1").style.background = songAlbums['song1Album'] + " center center";
+document.getElementById("song2").style.background = songAlbums['song2Album'] + " center center";
+document.getElementById("song3").style.background = songAlbums['song3Album'] + " center center";
+document.getElementById("song4").style.background = songAlbums['song4Album'] + " center center";
+document.getElementById("song5").style.background = songAlbums['song5Album'] + " center center";
+document.getElementById("song6").style.background = songAlbums['song6Album'] + " center center";
 
 document.getElementById("song0").style.backgroundSize="230px 230px";
 document.getElementById("song1").style.backgroundSize="230px 230px";
