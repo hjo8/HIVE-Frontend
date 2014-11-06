@@ -43,11 +43,6 @@ function getTags() {
 	}
 }
 
-var text = '{ "employees" : [' +
-'{ "firstName":"John" , "lastName":"Doe" },' +
-'{ "firstName":"Anna" , "lastName":"Smith" },' +
-'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-
 function showTags() {
 	var text = tag_list;
     document.getElementById("demo").innerHTML = text;
