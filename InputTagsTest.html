@@ -10,7 +10,7 @@
 <div align="center" class="logo"><img src="JPG/Hive Logo.jpg" HEIGHT="300" WIDTH="600" BORDER="0"></div>
 
     <div align="center">
-        <input class="tempo" type="range"  min="30" max="250" value="80" onchange="showValue(this.value)"/>
+        <input class="tempo" type="range"  min="30" max="250" value="80" onchange="showValue(this.value), getTempo()"/>
         Tempo: <span id="range">80</span> bpm
     </div>
 

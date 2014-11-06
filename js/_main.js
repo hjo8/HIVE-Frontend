@@ -8,17 +8,8 @@
     });
 } )( jQuery );
 
-function showValue(newValue)
-{
-	document.getElementById("range").innerHTML=newValue;
-}
-
 var userInput = function() {
 
-}
-
-function getTags() {
-    document.getElementById("tags").submit();
 }
 
 /**
