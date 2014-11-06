@@ -44,13 +44,13 @@ document.getElementById("song4").style.backgroundSize="230px 230px";
 document.getElementById("song5").style.backgroundSize="230px 230px";
 document.getElementById("song6").style.backgroundSize="230px 230px";
 
-var song0text = json_test.names[0];
-var song1text = json_test.names[1];
-var song2text = json_test.names[2];
-var song3text = json_test.names[3];
-var song4text = json_test.names[4];
-var song5text = json_test.names[5];
-var song6text = json_test.names[6];
+var song0name = json_test.names[0];
+var song1name = json_test.names[1];
+var song2name = json_test.names[2];
+var song3name = json_test.names[3];
+var song4name = json_test.names[4];
+var song5name = json_test.names[5];
+var song6name = json_test.names[6];
 /**
 document.getElementById("song0text").innerHTML = song0text;
 document.getElementById("song1text").innerHTML = song1text;

@@ -64,11 +64,11 @@ table {
   margin-bottom: -148px;
 }
 
-#song0text {
+#song0name, #song1name, #song2name, #song3name, #song4name, #song5name, #song6name {
   height: 35px;
 }
 
-#song0artist {
+#song0artist, #song1artist, #song2artist, #song3artist, #song4artist, #song5artist, #song6artist {
   height: 35px;
   font-size: 12px;
 }
