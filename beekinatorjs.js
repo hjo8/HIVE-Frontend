@@ -1,29 +1,26 @@
 var myArray = [
 {
 "num": "Q1",
-"context": "asdf",
-"choiceA": "A:a",
-"choiceB": "B:b",
-"choiceC": "C:c"
+"context": "asdf"
 },
 {
 "num": "Q2",
-"context": "zxcv",
-"choiceA": "A:d",
-"choiceB": "B:e",
-"choiceC": "C:f"
+"context": "zxcv"
 },
 {
 "num": "Q3",
-"context": "qwer",
-"choiceA": "A:g",
-"choiceB": "B:h",
-"choiceC": "C:i"
+"context": "qwer"
+},
+{
+"num": "Q4",
+"context": "tyui"
 }
 ]
 //myArray contains the questions. To be completed
 
 var i = -1;
+
+var tagList = [];
 
 function myFunction(arr) {
 	i++;
@@ -32,17 +29,25 @@ function myFunction(arr) {
 	'<p>' + arr[i].context + '</p>';
 
     document.getElementById("context").innerHTML = out;
-    document.getElementById("buttonA").innerHTML = arr[i].choiceA;
-    document.getElementById("buttonB").innerHTML = arr[i].choiceB;
-    document.getElementById("buttonC").innerHTML = arr[i].choiceC;
 }
 
 myFunction(myArray);
 
-buttonA.addEventListener("click", clicked);
-buttonB.addEventListener("click", clicked);
-buttonC.addEventListener("click", clicked);
+YesButton.addEventListener("click", clickedY);
+NoButton.addEventListener("click", clickedN);
+displayChoices.addEventListener("click", showChoices);
 
-function clicked(eve){
+function clickedY(eve){
 	myFunction(myArray);
+	tagList.push("Yes");
+}
+
+function clickedN(eve){
+	myFunction(myArray);
+	tagList.push("No");
 }//needs to add data process and transport functions.
+
+function showChoices() {
+	var text = tagList;
+    document.getElementById("choicesList").innerHTML = text;
+}
