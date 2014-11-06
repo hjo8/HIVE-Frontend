@@ -63,3 +63,12 @@
 table {
   margin-bottom: -148px;
 }
+
+#song0text {
+  height: 35px;
+}
+
+#song0artist {
+  height: 35px;
+  font-size: 12px;
+}

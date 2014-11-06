@@ -15,7 +15,8 @@ function getTempo() {
 
 var tag_list = [];
 var tag_json = {
-	"tags":tag_list,
+	"type":"tags",
+	"content":tag_list,
 	"tempo":currentTempo};
 function getTags() {
 	for (var i=0; i<genre_tags.length; i++){ 
