@@ -134,3 +134,8 @@ a {
 a:hover {
 	color:#FFFFFF;
 }
+
+#next {
+	position: relative;
+	left: 120px;
+}
