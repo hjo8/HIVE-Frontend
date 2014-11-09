@@ -1,0 +1,37 @@
+[
+  {
+    "artist":"Pink Floyd",
+    "song":"Money",
+    "album":"The Dark Side of the Moon"
+  },
+  {
+    "artist":"AC/DC",
+    "song":"Money Made",
+    "album":"Black Ice"
+  },
+  {
+    "artist":"Coldplay",
+    "song":"Magic",
+    "album":"Ghost Stories"
+  },
+  {
+    "artist":"The Beatles",
+    "song":"You Never Give Me Your Money",
+    "album":"Abbey Road"
+  },
+  {
+    "artist":"Muse",
+    "song":"Uprising",
+    "album":"The Resistance"
+  },
+  {
+    "artist":"Guns N' Roses",
+    "song":"Welcome to the Jungle",
+    "album":"Appetite for Destruction"
+  },
+  {
+    "artist":"Nirvana",
+    "song":"Smells Like Teen Spirit",
+    "album":"Nevermind"
+  }
+]

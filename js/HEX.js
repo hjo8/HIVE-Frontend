@@ -8,7 +8,48 @@ var song5Album = "url(http://www.smashingmagazine.com/images/music-cd-covers/30.
 var song6Album = "url(http://www.tomlohrmannmusic.com/blog/wp-content/uploads/2012/09/nirvana_nevermind_album_cover.jpeg)";
 */
 
-var json_test = {"status" : "success", "names" : ["name1", "name2", "name3", "name4", "name5", "name6", "name7"]};
+
+var xmlhttp = new XMLHttpRequest();
+var url = "JSON.txt";
+
+var json_test = {"status":"fail"}; //{"status" : "success", "names" : ["name1", "name2", "name3", "name4", "name5", "name6", "name7"]};
+
+$.ajaxSetup({beforeSend: function(xhr){
+  if (xhr.overrideMimeType)
+  {
+    xhr.overrideMimeType("application/json");
+  }
+}
+});
+
+$.getJSON( "JSON.txt", function( json ) {
+ 	document.getElementById("song0name").innerHTML = json[0].song;
+ 	document.getElementById("song0artist").innerHTML = json[0].artist;
+ 	document.getElementById("song1name").innerHTML = json[1].song;
+ 	document.getElementById("song1artist").innerHTML = json[1].artist;
+ 	document.getElementById("song2name").innerHTML = json[2].song;
+ 	document.getElementById("song2artist").innerHTML = json[2].artist;
+ 	document.getElementById("song3name").innerHTML = json[3].song;
+ 	document.getElementById("song3artist").innerHTML = json[3].artist;
+ 	document.getElementById("song4name").innerHTML = json[4].song;
+ 	document.getElementById("song4artist").innerHTML = json[4].artist;
+ 	document.getElementById("song5name").innerHTML = json[5].song;
+ 	document.getElementById("song5artist").innerHTML = json[5].artist;
+ 	document.getElementById("song6name").innerHTML = json[6].song;
+ 	document.getElementById("song6artist").innerHTML = json[6].artist;
+ });
+
+/**
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' + 
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+*/
 
 var songAlbums = {
 	song0Album : "url(http://www.hwdyk.com/q/quizimage/albumcovertrivia.jpg)",
@@ -44,6 +85,7 @@ document.getElementById("song4").style.backgroundSize="230px 230px";
 document.getElementById("song5").style.backgroundSize="230px 230px";
 document.getElementById("song6").style.backgroundSize="230px 230px";
 
+/**
 var song0name = json_test.names[0];
 var song1name = json_test.names[1];
 var song2name = json_test.names[2];
@@ -51,11 +93,4 @@ var song3name = json_test.names[3];
 var song4name = json_test.names[4];
 var song5name = json_test.names[5];
 var song6name = json_test.names[6];
-/**
-document.getElementById("song0text").innerHTML = song0text;
-document.getElementById("song1text").innerHTML = song1text;
-document.getElementById("song2text").innerHTML = song2text;
-document.getElementById("song3text").innerHTML = song3text;
-document.getElementById("song4text").innerHTML = song4text;
-document.getElementById("song5text").innerHTML = song5text;
-document.getElementById("song6text").innerHTML = song6text;*/
+*/
