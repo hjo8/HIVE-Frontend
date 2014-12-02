@@ -1,8 +1,8 @@
-<html>
+{% load staticfiles %}<html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/HIVE.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HIVE.css' %}">
     <title>HiVe</title>
-    <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
+    <link rel="shortcut icon" href="{% static 'songtags/JPG/HIVE BEE ICON.png' %}">
 </head>
 <body>
 
@@ -33,14 +33,14 @@
 
 <div class="mainLogo">
     <div align="center" data-0="opacity:1;" data-top="opacity:0;">
-    <img src="JPG/Hive Logo.jpg" width="600" height="300"/>
+    <img src="{% static 'songtags/JPG/Hive Logo.jpg' %}" width="600" height="300"/>
     <h1>The New Way to Search Songs</h1>
     </div>
 </div>
 
 <table class="bee" align="center" style="width:1000px" data--400-end="opacity:1;" data-start="opacity:0;">
   <tr>
-    <td><img src="JPG/HIVE BEE.png" width="400" height="400"></td>
+    <td><img src="{% static 'songtags/JPG/HIVE BEE.png' %}" width="400" height="400"></td>
     <td><div class="speechBubble">
         <div>
             <p>Hello, I am the HiVe Bee, and I'll bee your guide</p>
@@ -55,7 +55,7 @@
   </tr>
 </table>
 
-<script type="text/javascript" src="js/skrollr.js"></script>
+<script type="text/javascript" src="{% static 'songtags/js/skrollr.js' %}"></script>
     <script type="text/javascript">
     var s = skrollr.init([]);
     </script>

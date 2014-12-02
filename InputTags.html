@@ -1,8 +1,8 @@
-<html>
+{% load staticfiles %}<html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/HIVE.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HIVE.css' %}">
     <title>HiVe</title>
-    <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
+    <link rel="shortcut icon" href="{% static 'songtags/JPG/HIVE BEE ICON.png' %}">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
@@ -32,7 +32,7 @@
     </div>
 
 
-<div align="center" class="logo"><img src="JPG/Hive Logo.jpg" HEIGHT="300" WIDTH="600" BORDER="0"></div>
+<div align="center" class="logo"><img src="{% static 'songtags/JPG/Hive Logo.jpg' %}" HEIGHT="300" WIDTH="600" BORDER="0"></div>
 <meta class="ROBOTS" content="NOINDEX, NOFOLLOW" />
 <!-- CSS styles for standard search box -->
 
@@ -114,11 +114,11 @@
 
 
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="js/skrollr.js"></script>
+<script type="text/javascript" src="{% static 'songtags/js/skrollr.js' %}"></script>
 <script type="text/javascript">
     var s = skrollr.init([]);
 </script>
-<script type="text/javascript" src="js/_main.js"></script>
+<script type="text/javascript" src="{% static 'songtags/js/_main.js' %}"></script>
 
 </body>
 </html>

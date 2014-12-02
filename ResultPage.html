@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+{% load staticfiles %}<html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/HIVE.css">
-  <link rel="stylesheet" type="text/css" href="css/HEX.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HIVE.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HEX.css' %}">
   <title>HiVe</title>
-  <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
+  <link rel="shortcut icon" href="{% static 'songtags/JPG/HIVE BEE ICON.png' %}">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
@@ -112,8 +112,8 @@
 
 <br>
 
-<script type="text/javascript" src="js/HEX.js"></script>
-<script type="text/javascript" src="js/papaparse.min.js"></script>
+<script type="text/javascript" src="{% static 'songtags/js/HEX.js' %}"></script>
+<script type="text/javascript" src="{% static 'songtags/js/papaparse.min.js' %}"></script>
  
 </body>
 </html>
