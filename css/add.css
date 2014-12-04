@@ -12,3 +12,19 @@ table tr td input{
 		border-radius: 5px;
 		width: 300px;
 }
+
+.g-recaptcha div div iframe#I0_1417670994333 html body div{
+	background: #fbc42b;
+	border: 3px solid black;
+}
+
+.rc-anchor rc-anchor-standard {
+	background: #fbc42b;
+	border: 3px solid black;
+}
+
+#recaptcha-token {
+	background: #fbc42b;
+	border: 3px solid black;
+}
+
