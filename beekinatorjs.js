@@ -25,11 +25,19 @@ var myArray = [
 },
 {
 "num": "Q7",
-"context": "Does the instruments played include a piano?"
+"context": "Do the instruments include a piano?"
 },
 {
 "num": "Q8",
-"context": "Does the instruments played include a guitar?"
+"context": "Do the instruments include a guitar?"
+},
+{
+"num": "Q9",
+"context": "Do the instruments include drums?"
+},
+{
+"num": "Q10",
+"context": "Is this song sung by a single person?"
 }
 ]
 //myArray contains the questions. To be completed
@@ -71,6 +79,8 @@ function clickedY(eve){
 		tagList.push("piano");
 	if ( i == 7 )
 		tagList.push("guitar");
+	if ( i == 8 )
+		tagList.push("drums");
 	i++;
 	myFunction(myArray);
 }
@@ -80,6 +90,8 @@ function clickedN(eve){
 		tagList.push("male");
 	if ( i == 1 )
 		tagList.push("slow");
+	if ( i == 9 )
+		tagList.push("group");
 	i++;
 	myFunction(myArray);
 
