@@ -13,7 +13,7 @@
 <div align="center" class="logo"><img src="JPG/Hive Logo.jpg" HEIGHT="300" WIDTH="600" BORDER="0"></div>
 
     <div align="center">
-        <input class="tempo" type="range"  min="30" max="250" value="80" onchange="showValue(this.value), getTempo()"/>
+        <input class="tempo" type="range"  min="30" max="250" value="80" step="10" onchange="showValue(this.value), getTempo()"/>
         Tempo: <span id="range">80</span> bpm
     </div>
 
@@ -36,7 +36,7 @@
         </td>
     </tr>
     <tr>
-        <td align="center">
+        <td>
             <form align="left">
                 <input type="checkbox" class="genre" value="classic">Classic<br>
                 <input type="checkbox" class="genre" value="rock">Rock<br> 
@@ -45,7 +45,7 @@
                 <input type="checkbox" class="genre" value="edm">Electronic 
             </form>
         </td>
-        <td align="center">
+        <td>
             <form align="left">
                 <input type="checkbox" class="instrument" value="guitar">Guitar<br>
                 <input type="checkbox" class="instrument" value="drums">Drums<br> 
@@ -81,7 +81,7 @@
 
 <button onclick="getTags()">Get Tags</button>
 <button onclick="showTags()">Show Tags</button>
-<button onclick="getTags()">POST Tags</button>
+<button onclick="writeFile()">POST Tags</button>
 
 <p id="demo"></p>
 

@@ -1,23 +1,36 @@
 genre_tags = document.getElementsByClassName("genre");
 instrument_tags = document.getElementsByClassName("instrument");
 loudness_tag = document.getElementsByClassName("loudness");
-currentTempo = document.getElementById("range").innerHTML;
+currentTempo = document.getElementById("tempo").innerHTML;
+currentLoudness = document.getElementById("loudness").innerHTML;
 
-function showValue(newValue)
+function showTempoValue(newValue)
 {
-	document.getElementById("range").innerHTML=newValue;
+	document.getElementById("tempo").innerHTML=newValue;
+}
+
+function showLoudnessValue(newValue)
+{
+	document.getElementById("loudness").innerHTML=newValue;
 }
 
 function getTempo() {
-	currentTempo = document.getElementById("range").innerHTML;
+	currentTempo = document.getElementById("tempo").innerHTML;
 	tag_json.tempo = currentTempo;
+}
+
+function getLoudness() {
+	currentLoudness = document.getElementById("loudness").innerHTML;
+	tag_json.loudness = currentLoudness;
 }
 
 var tag_list = [];
 var tag_json = {
 	"type":"tags",
 	"content":tag_list,
-	"tempo":currentTempo};
+	"tempo":currentTempo,
+	"loudness":currentLoudness
+};
 
 function getTags() {
 	for (var i=0; i<genre_tags.length; i++){ 
@@ -43,11 +56,21 @@ function getTags() {
 			console.log(tag.value);
 		}
 	}
+
+	tag_json.loudness = currentLoudness;
+
+	tag_json.tempo = currentTempo;
 }
 
 function showTags() {
 	var text = tag_list;
     document.getElementById("demo").innerHTML = text;
+}
+
+function getTagsString() {
+	var str = document.getElementById("tagstring").value;
+	tag_list = str.split(", ");
+	tag_json.content = tag_list;
 }
 
 var url = "writefiletest.txt";
@@ -74,5 +97,6 @@ xmlhttp.onreadystatechange = function () { //Call a function when the state chan
 function postTags() {
 	getTags();
 	getTempo();
+	getLoudness();
 	xmlhttp.send(JSON.stringify(tag_json));
 }
