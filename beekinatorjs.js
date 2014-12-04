@@ -1,19 +1,35 @@
 var myArray = [
 {
 "num": "Q1",
-"context": "asdf"
+"context": "Is this song sung by a female artist?"
 },
 {
 "num": "Q2",
-"context": "zxcv"
+"context": "Is this song fast?"
 },
 {
 "num": "Q3",
-"context": "qwer"
+"context": "Is the genre country?"
 },
 {
 "num": "Q4",
-"context": "tyui"
+"context": "Is the genre jazz?"
+},
+{
+"num": "Q5",
+"context": "Is the genre pop?"
+},
+{
+"num": "Q6",
+"context": "Is the genre heavy metal?"
+},
+{
+"num": "Q7",
+"context": "Does the instruments played include a piano?"
+},
+{
+"num": "Q8",
+"context": "Does the instruments played include a guitar?"
 }
 ]
 //myArray contains the questions. To be completed
@@ -39,26 +55,37 @@ next.addEventListener("click", goToNext);
 previous.addEventListener("click", goToPrevious);
 
 function clickedY(eve){
-	tagList.push("Yes");
+	if ( i == 0 )
+		tagList.push("female");
+	if ( i == 1 )
+		tagList.push("fast");
+	if ( i == 2 )
+		tagList.push("country");
+	if ( i == 3 )
+		tagList.push("jazz");
+	if ( i == 4 )
+		tagList.push("pop");
+	if ( i == 5 )
+		tagList.push("heavy metal");
+	if ( i == 6 )
+		tagList.push("piano");
+	if ( i == 7 )
+		tagList.push("guitar");
+	i++;
+	myFunction(myArray);
 }
 
 function clickedN(eve){
-	tagList.push("No");
+	if ( i == 0 )
+		tagList.push("male");
+	if ( i == 1 )
+		tagList.push("slow");
+	i++;
+	myFunction(myArray);
+
 }//needs to add data process and transport functions.
 
 function showChoices(){
 	var text = tagList;
     document.getElementById("choicesList").innerHTML = text;
-}
-
-function goToNext(){
-	i++;
-	myFunction(myArray);
-}
-
-function goToPrevious(){
-	i--;
-	myFunction(myArray);
-	tagList.pop();
-	tagList.pop();
 }
