@@ -18,7 +18,7 @@
 <div align="center">
 
 <form align="center">
-	<input type="text" id="tagstring" name="tags" class="tagsinput" size="70" maxlength="120" placeholder="Type in Tags (separated by commas)" value=""><br><br>
+	<input type="text" id="tagstring" name="tags" class="tagsinput" size="70" maxlength="120" placeholder="Type in Tags" value=""><br><br>
     <table align="center">
         <tr><td>
 	<input class="tempo" type="range" name="tempo" min="0" max="250" value="0" step="10" onchange="showTempoValue(this.value), getTempo()"/></td>
@@ -41,16 +41,13 @@
 <div align="center">
     <p>or Upload a File</p>
 <form action="demo_form.asp">
-  <input type="file" name="waveform" accept="" >
+  <input type="file" name="waveform" accept="">
   <input type="submit" value="UPLOAD" class="tagbutton">
 </form>
 </div>
 
 
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<script type="text/javascript">
-    var s = skrollr.init([]);
-</script>
 <script type="text/javascript" src="js/_main.js"></script>
 <script type="text/javascript" src="js/getTags.js"></script>
 
