@@ -1,0 +1,30 @@
+table tr td {
+	text-align: right;
+}
+
+table tr td input{
+		margin: 0;
+		margin-left: 10px;
+		padding: 5px 10px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:2px solid black;
+		border-radius: 5px;
+		width: 300px;
+}
+
+.g-recaptcha div div iframe#I0_1417670994333 html body div{
+	background: #fbc42b;
+	border: 3px solid black;
+}
+
+.rc-anchor rc-anchor-standard {
+	background: #fbc42b;
+	border: 3px solid black;
+}
+
+#recaptcha-token {
+	background: #fbc42b;
+	border: 3px solid black;
+}
+

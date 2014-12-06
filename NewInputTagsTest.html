@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="css/HIVE.css">
+    <link rel="stylesheet" type="text/css" href="css/Range.css">
+    <title>HiVe</title>
+    <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<div align="center" class="logo"><img src="JPG/Hive Logo.png" HEIGHT="300" WIDTH="800" BORDER="0"></div>
+
+<br>
+
+<div align="center">
+
+<form align="center">
+	<input type="text" id="tagstring" name="tags" class="tagsinput" size="70" maxlength="120" placeholder="Type in Tags" value=""><br><br>
+    <table align="center">
+        <tr><td>
+	<input class="tempo" type="range" name="tempo" min="0" max="250" value="0" step="10" onchange="showTempoValue(this.value), getTempo()"/></td>
+    	<td class="rangeoutput">Tempo: <span id="tempo">0</span> bpm <br></td></tr>
+        <tr><td>
+    <input class="loudness" type="range" name="loudness" min="0" max="100" value="0" step="5" onchange="showLoudnessValue(this.value), getLoudness()"/></td>
+    	<td class="rangeoutput">Loudness: <span id="loudness">0</span></td></tr></table><br><br>
+	<input type="submit" class="tagbutton" value="Get me the song!">
+</form>
+
+<br>
+
+	<div align="center">
+        <input type="button" onclick="getTagsString()" value="Get me the song!" class="tagbutton">
+    </div>
+</div>
+
+<br><br><br>
+
+<div align="center">
+    <p>or Upload a File</p>
+<form action="demo_form.asp">
+  <input type="file" name="waveform" accept="">
+  <input type="submit" value="UPLOAD" class="tagbutton">
+</form>
+</div>
+
+
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/_main.js"></script>
+<script type="text/javascript" src="js/getTags.js"></script>
+
+</body>
+</html>
+
+    
+</div>
+</html>

@@ -8,7 +8,7 @@ $.ajaxSetup({beforeSend: function(xhr){
 }
 });
 
-$.getJSON( "JSON.txt", function( json ) {
+$.getJSON( url, function( json ) {
  	document.getElementById("song0name").innerHTML = json[0].song;
  	document.getElementById("song0artist").innerHTML = json[0].artist;
  	document.getElementById("song1name").innerHTML = json[1].song;
