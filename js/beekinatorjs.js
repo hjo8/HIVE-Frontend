@@ -83,6 +83,8 @@ function clickedY(eve) {
         tagList.push("guitar");
     if (i == 8)
         tagList.push("drums");
+    if (i == 9)
+        tagList.push("single singer");
     i++;
     myFunction(myArray);
 }
