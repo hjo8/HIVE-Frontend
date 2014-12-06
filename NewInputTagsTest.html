@@ -17,21 +17,30 @@
 
 <div align="center">
 
-<form align="center">
-	<input type="text" id="tagstring" name="tags" class="tagsinput" size="70" maxlength="120" placeholder="Type in Tags" value=""><br><br>
-    <table align="center">
-        <tr><td>
-	<input class="tempo" type="range" name="tempo" min="0" max="250" value="0" step="10" onchange="showTempoValue(this.value), getTempo()"/></td>
-    	<td class="rangeoutput">Tempo: <span id="tempo">0</span> bpm <br></td></tr>
-        <tr><td>
-    <input class="loudness" type="range" name="loudness" min="0" max="100" value="0" step="5" onchange="showLoudnessValue(this.value), getLoudness()"/></td>
-    	<td class="rangeoutput">Loudness: <span id="loudness">0</span></td></tr></table><br><br>
-	<input type="submit" class="tagbutton" value="Get me the song!">
-</form>
+    <form align="center">
+        <input type="text" id="tagstring" name="tags" class="tagsinput" size="70" maxlength="120"
+               placeholder="Type in Tags" value=""><br><br>
+        <table align="center">
+            <tr>
+                <td>
+                    <input class="tempo" type="range" name="tempo" min="0" max="250" value="0" step="10"
+                           onchange="showTempoValue(this.value), getTempo()"/></td>
+                <td class="rangeoutput">Tempo: <span id="tempo">0</span> bpm <br></td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="loudness" type="range" name="loudness" min="0" max="100" value="0" step="5"
+                           onchange="showLoudnessValue(this.value), getLoudness()"/></td>
+                <td class="rangeoutput">Loudness: <span id="loudness">0</span></td>
+            </tr>
+        </table>
+        <br><br>
+        <input type="submit" class="tagbutton" value="Get me the song!">
+    </form>
 
-<br>
+    <br>
 
-	<div align="center">
+    <div align="center">
         <input type="button" onclick="getTagsString()" value="Get me the song!" class="tagbutton">
     </div>
 </div>
@@ -40,10 +49,11 @@
 
 <div align="center">
     <p>or Upload a File</p>
-<form action="demo_form.asp">
-  <input type="file" name="waveform" accept="">
-  <input type="submit" value="UPLOAD" class="tagbutton">
-</form>
+
+    <form action="demo_form.asp">
+        <input type="file" name="waveform" accept="">
+        <input type="submit" value="UPLOAD" class="tagbutton">
+    </form>
 </div>
 
 
@@ -54,6 +64,6 @@
 </body>
 </html>
 
-    
+
 </div>
 </html>
