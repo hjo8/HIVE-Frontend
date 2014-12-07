@@ -35,6 +35,7 @@ $(document).ready(function(){
       document.getElementById("songartist").innerHTML = document.getElementById("song6artist").innerHTML;
       document.getElementById("song").style.background = document.getElementById("song6").style.background;
     }
+    document.getElementById("song").style.backgroundSize = "700px 700px";
     $(".bighexagon").show(1000);
   });
 });
