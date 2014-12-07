@@ -1,3 +1,54 @@
+$(document).ready(function(){
+  $(".hexagon").click(function(){
+    if (this.id == "song0") {
+      document.getElementById("songname").innerHTML = document.getElementById("song0name").innerHTML;
+      document.getElementById("songartist").innerHTML = document.getElementById("song0artist").innerHTML;
+      document.getElementById("song").style.background = document.getElementById("song0").style.background;
+    }
+    if (this.id == "song1") {
+      document.getElementById("songname").innerHTML = document.getElementById("song1name").innerHTML;
+      document.getElementById("songartist").innerHTML = document.getElementById("song1artist").innerHTML;
+      document.getElementById("song").style.background = document.getElementById("song1").style.background;
+    }
+    if (this.id == "song2") {
+      document.getElementById("songname").innerHTML = document.getElementById("song2name").innerHTML;
+      document.getElementById("songartist").innerHTML = document.getElementById("song2artist").innerHTML;
+      document.getElementById("song").style.background = document.getElementById("song2").style.background;
+    }
+    if (this.id == "song3") {
+      document.getElementById("songname").innerHTML = document.getElementById("song3name").innerHTML;
+      document.getElementById("songartist").innerHTML = document.getElementById("song3artist").innerHTML;
+      document.getElementById("song").style.background = document.getElementById("song3").style.background;
+    }
+    if (this.id == "song4") {
+      document.getElementById("songname").innerHTML = document.getElementById("song4name").innerHTML;
+      document.getElementById("songartist").innerHTML = document.getElementById("song4artist").innerHTML;
+      document.getElementById("song").style.background = document.getElementById("song4").style.background;
+    }
+    if (this.id == "song5") {
+      document.getElementById("songname").innerHTML = document.getElementById("song5name").innerHTML;
+      document.getElementById("songartist").innerHTML = document.getElementById("song5artist").innerHTML;
+      document.getElementById("song").style.background = document.getElementById("song5").style.background;
+    }
+    if (this.id == "song6") {
+      document.getElementById("songname").innerHTML = document.getElementById("song6name").innerHTML;
+      document.getElementById("songartist").innerHTML = document.getElementById("song6artist").innerHTML;
+      document.getElementById("song").style.background = document.getElementById("song6").style.background;
+    }
+    $(".bighexagon").show(1000);
+  });
+});
+
+$(document).ready(function(){
+  $(".bighexagon").click(function(){
+    $(".bighexagon").hide(1000);
+  });
+});
+
+//function hide() {
+//  document.getElementById("enlarged").style.display = "none";
+//}
+
 var url = "JSON.txt";
 
 $.ajaxSetup({beforeSend: function(xhr){
