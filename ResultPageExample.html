@@ -1,9 +1,9 @@
 {% load staticfiles %}
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="static/songtags/css/HIVE.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HIVE.css' %}">
     <title>HiVe</title>
-    <link rel="shortcut icon" href="static/songtags/JPG/HIVE BEE ICON.png">
+    <link rel="shortcut icon" href="{% static 'songtags/JPG/HIVE BEE ICON.png' %}">
 </head>
 
 <meta charset="utf-8">
@@ -207,7 +207,7 @@
         </script>
 
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="static/songtags/js/skrollr.js"></script>
+        <script type="text/javascript" src="{% static 'songtags/js/skrollr.js' %}"></script>
         <script type="text/javascript">
             var s = skrollr.init([]);
         </script>

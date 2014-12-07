@@ -1,9 +1,9 @@
 {% load staticfiles %}
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="static/songtags/css/HIVE.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HIVE.css' %}">
     <title>HiVe</title>
-    <link rel="shortcut icon" href="static/songtags/JPG/HIVE BEE ICON.png">
+    <link rel="shortcut icon" href="{% static 'songtags/JPG/HIVE BEE ICON.png' %}">
 </head>
 <body>
 
@@ -32,7 +32,7 @@
         <div id="tab4" class="tab">
         </div>
 
-        <div align="center" class="logo"><img src="static/songtags/JPG/Hive Logo.jpg" HEIGHT="300" WIDTH="600"
+        <div align="center" class="logo"><img src="{% static 'songtags/JPG/Hive Logo.jpg' %}" HEIGHT="300" WIDTH="600"
                                               BORDER="0"></div>
         <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
         <!-- CSS styles for standard search box -->
