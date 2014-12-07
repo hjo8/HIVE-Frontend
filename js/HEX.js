@@ -45,10 +45,6 @@ $(document).ready(function(){
   });
 });
 
-//function hide() {
-//  document.getElementById("enlarged").style.display = "none";
-//}
-
 var url = "JSON.txt";
 
 $.ajaxSetup({beforeSend: function (xhr) {

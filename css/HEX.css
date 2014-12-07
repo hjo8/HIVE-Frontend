@@ -77,9 +77,8 @@ table {
 }
 
 #song0artist, #song1artist, #song2artist, #song3artist, #song4artist, #song5artist, #song6artist {
-<<<<<<< HEAD
-  height: 35px;
-  font-size: 12px;
+    height: 35px;
+    font-size: 12px;
 }
 
 #songname {
@@ -156,8 +155,3 @@ table {
   transform-origin: right top;
   transform: rotate(60deg) translate(340px, 0);
 }
-=======
-    height: 35px;
-    font-size: 12px;
-}
->>>>>>> FETCH_HEAD
