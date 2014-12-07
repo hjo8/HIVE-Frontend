@@ -9,41 +9,47 @@
     <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('recaptcha', {
-          'sitekey' : '6Ldwuv4SAAAAAAXwJvGKnsnUPwhdayhUXwOdGyWK',
-          'theme' : 'dark'
-        });
-      };
+        var onloadCallback = function () {
+            grecaptcha.render('recaptcha', {
+                'sitekey': '6Ldwuv4SAAAAAAXwJvGKnsnUPwhdayhUXwOdGyWK',
+                'theme': 'dark'
+            });
+        };
     </script>
 </head>
 <body>
-<h1><a href="../index/">THE HIVE</a></h1><br><br>
+<h1><a href="../index/">THE HIVE</a></h1><br><div style="margin-top: -50px"><br>
 
-<div align="center" class="logo"><img src="JPG/Hive Logo.png" HEIGHT="300" WIDTH="800" BORDER="0"></div>
+<div align="center" class="logo"><img src="JPG/Hive Logo.png" HEIGHT="250" WIDTH="700" BORDER="0"></div>
+
 
 <div align="center">
-<form>
-<input type='hidden' name='csrfmiddlewaretoken' value='VctFYgSpJCWNQSsbL3y4o6J6QTCu9kdS' />
-<table>
-<tr>
-    <td>Song name </td><td><input type="text" name="songname"/></td>
-</tr>
-<tr>
-    <td>Album name </td><td><input type="text" name="albumname" /></td>
-</tr>
-<tr>
-    <td>Singer </td><td><input type="text" name="singer"/></td>
-</tr>
-<tr>
-    <td>Tags </td><td><input type="text" name="tags"/></td>
-</tr>
-</table>
-<br>
-    <div id="recaptcha"></div>
-<br>
-    <input type="submit" value="Add this song" class="tagbutton"/>
-</form>
+    <form>
+        <input type='hidden' name='csrfmiddlewaretoken' value='VctFYgSpJCWNQSsbL3y4o6J6QTCu9kdS'/>
+        <table>
+            <tr>
+                <td>Song name</td>
+                <td><input type="text" name="songname"/></td>
+            </tr>
+            <tr>
+                <td>Album name</td>
+                <td><input type="text" name="albumname"/></td>
+            </tr>
+            <tr>
+                <td>Singer</td>
+                <td><input type="text" name="singer"/></td>
+            </tr>
+            <tr>
+                <td>Tags</td>
+                <td><input type="text" name="tags"/></td>
+            </tr>
+        </table>
+        <br>
+
+        <div id="recaptcha"></div>
+        <br>
+        <input type="submit" value="Add this song" class="tagbutton"/>
+    </form>
 </div>
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>

@@ -1,8 +1,9 @@
+{% load staticfiles %}
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/HIVE.css">
+    <link rel="stylesheet" type="text/css" href="static/songtags/css/HIVE.css">
     <title>HiVe</title>
-    <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
+    <link rel="shortcut icon" href="static/songtags/JPG/HIVE BEE ICON.png">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
@@ -29,100 +30,101 @@
         </div>
 
         <div id="tab4" class="tab">
-    </div>
+        </div>
 
 
-<div align="center" class="logo"><img src="JPG/Hive Logo.jpg" HEIGHT="300" WIDTH="600" BORDER="0"></div>
-<meta class="ROBOTS" content="NOINDEX, NOFOLLOW" />
-<!-- CSS styles for standard search box -->
+        <div align="center" class="logo"><img src="static/songtags/JPG/Hive Logo.jpg" HEIGHT="300" WIDTH="600"
+                                              BORDER="0"></div>
+        <meta class="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+        <!-- CSS styles for standard search box -->
 
-<body>
-	<!-- HTML for SEARCH BAR -->
+        <body>
+        <!-- HTML for SEARCH BAR -->
 
 
-    <div align="center">
-        <input class="tempo" type="range"  min="30" max="250" value="80" onchange="showValue(this.value)"/>
-        Tempo: <span id="range">80</span> bpm
-    </div>
+        <div align="center">
+            <input class="tempo" type="range" min="30" max="250" value="80" onchange="showValue(this.value)"/>
+            Tempo: <span id="range">80</span> bpm
+        </div>
 
-<table id="dropdown" align="center">
-    <tr>
-        <td align="center">Genre</td>
-        <td align="center">Instruments</td>
-        <td align="center">Loudness</td>
-    </tr>
-    <br>
-    <tr>
-        <td align="center">
-            <form align="left">
-                <input type="checkbox" class="genre" value="classic">Classic<br>
-                <input type="checkbox" class="genre" value="rock">Rock<br> 
-                <input type="checkbox" class="genre" value="pop">Pop<br> 
-                <input type="checkbox" class="genre" value="rap">Rap/Hiphop<br> 
-                <input type="checkbox" class="genre" value="edm">Electronic 
+        <table id="dropdown" align="center">
+            <tr>
+                <td align="center">Genre</td>
+                <td align="center">Instruments</td>
+                <td align="center">Loudness</td>
+            </tr>
+            <br>
+            <tr>
+                <td align="center">
+                    <form align="left">
+                        <input type="checkbox" class="genre" value="classic">Classic<br>
+                        <input type="checkbox" class="genre" value="rock">Rock<br>
+                        <input type="checkbox" class="genre" value="pop">Pop<br>
+                        <input type="checkbox" class="genre" value="rap">Rap/Hiphop<br>
+                        <input type="checkbox" class="genre" value="edm">Electronic
+                    </form>
+                </td>
+                <td align="center">
+                    <form align="left">
+                        <input type="checkbox" class="instrument" value="guitar">Guitar<br>
+                        <input type="checkbox" class="instrument" value="drums">Drums<br>
+                        <input type="checkbox" class="instrument" value="bass">Bass<br>
+                        <input type="checkbox" class="instrument" value="piano">Piano<br>
+                        <input type="checkbox" class="instrument" value="violin">Violin
+                    </form>
+                </td>
+                <td>
+                    <form align="left">
+                        <input type="checkbox" class="loudness" value="1">Silent<br>
+                        <input type="checkbox" class="loudness" value="2">Quiet<br>
+                        <input type="checkbox" class="loudness" value="3">Normal<br>
+                        <input type="checkbox" class="loudness" value="4">Loud<br>
+                        <input type="checkbox" class="loudness" value="5">Thundering
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option value="classic">Classic</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="rap">Rap/Hiphop</option>
+                        <option value="edm">Electronic</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <div align="center">
+            <form>
+                <input type="checkbox" class="sex" value="male">Male
+                <input type="checkbox" class="sex" value="female">Female
             </form>
-        </td>
-        <td align="center">
-            <form align="left">
-                <input type="checkbox" class="instrument" value="guitar">Guitar<br>
-                <input type="checkbox" class="instrument" value="drums">Drums<br> 
-                <input type="checkbox" class="instrument" value="bass">Bass<br> 
-                <input type="checkbox" class="instrument" value="piano">Piano<br> 
-                <input type="checkbox" class="instrument" value="violin">Violin 
-            </form>
-        </td>
-        <td>
-            <form align="left">
-                <input type="checkbox" class="loudness" value="1">Silent<br>
-                <input type="checkbox" class="loudness" value="2">Quiet<br> 
-                <input type="checkbox" class="loudness" value="3">Normal<br> 
-                <input type="checkbox" class="loudness" value="4">Loud<br> 
-                <input type="checkbox" class="loudness" value="5">Thundering 
-            </form>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <select>
-                <option value="classic">Classic</option>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="rap">Rap/Hiphop</option>
-                <option value="edm">Electronic</option>
-            </select>
-        </td>
-    </tr>
-</table>
-<br>
-<div align="center">
-    <form>
-        <input type="checkbox" class="sex" value="male">Male
-        <input type="checkbox" class="sex" value="female">Female
-    </form>
-</div>
+        </div>
 
-<form id="tfnewsearch" method="get" action="ResultPage.html">
-    <div align="center">
-        <input type="submit" onclick="myFunction()" value="Get me the song!" class="tagbutton">
-    </div>
-</form>
+        <form id="tfnewsearch" method="get" action="ResultPage.html">
+            <div align="center">
+                <input type="submit" onclick="myFunction()" value="Get me the song!" class="tagbutton">
+            </div>
+        </form>
 
-<button onclick="showTags()">Show Tags</button>
+        <button onclick="showTags()">Show Tags</button>
 
-<p id="demo"></p>
+        <p id="demo"></p>
 
 
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="static/songtags/js/skrollr.js"></script>
+        <script type="text/javascript">
+            var s = skrollr.init([]);
+        </script>
+        <script type="text/javascript" src="static/songtags/js/_main.js"></script>
 
-<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="js/skrollr.js"></script>
-<script type="text/javascript">
-    var s = skrollr.init([]);
-</script>
-<script type="text/javascript" src="js/_main.js"></script>
-
-</body>
+        </body>
 </html>
 
-    
+
 </div>
 </html>
