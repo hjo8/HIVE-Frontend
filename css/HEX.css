@@ -80,3 +80,78 @@ table {
     height: 35px;
     font-size: 12px;
 }
+
+#songname {
+  height: 100px;
+  font-size: 36px;
+}
+
+#songartist {
+  height: 100px;
+  font-size: 24px;
+}
+
+.bighexagon {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left:50%;
+  margin: 100px auto;
+  margin-left: -295px;
+  width: 590px;
+  height: 340px;
+  background-image: url('http://static.tumblr.com/qmraazf/ps5mjrmim/unknown-album.png');
+  background-position: center center;
+  z-index: 1;
+  /* Text styling */
+  line-height: 340px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  cursor: pointer;
+  transition: color 500ms ease, text-shadow 500ms ease;
+}
+.bighexagon:hover {
+  color: #fff;
+  text-shadow: 0 0 10px black;
+}
+
+.bighexagon .face1,
+.bighexagon .face2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: inherit;
+  z-index: -1;
+  /* Keeps borders smooth in webkit */
+  backface-visibility: hidden;
+}
+.bighexagon .face1:before,
+.bighexagon .face2:before {
+  content: '';
+  position: absolute;
+  width: 680px;
+  height: 680px;
+  background: inherit;
+}
+
+.bighexagon .face1 { transform: rotate(60deg); }
+.bighexagon .face1:before {
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(-60deg) translate(-340px, 0);
+}
+
+.bighexagon .face2 { transform: rotate(-60deg); }
+.bighexagon .face2:before {
+  right: 0;
+  transform-origin: right top;
+  transform: rotate(60deg) translate(340px, 0);
+}
