@@ -1,3 +1,4 @@
+<!doctype html>
 {% load staticfiles %}
 <html>
 <head>
@@ -7,34 +8,18 @@
 </head>
 <body>
 
-<div class="tabs" align="right">
-    <ul class="topNavigation">
-        <li>[<a href="Test.html">home</a>]</li>
-        <li>[<a href="SearchSong.html">search song</a>]</li>
-        <li>[<a href="ResultPage.html">my songs</a>]</li>
-        <li>[<a href="searchByTagsOptions.html">tags</a>]</li>
-        <li>[<a href="Beekinator.html">beekinator</a>]</li>
-        <li>[<a href="#tab4">register</a>]</li>
-        <li>[<a href="#tab4">login</a>]</li>
+    <div class="tabs" align="right">
+        <ul class="topNavigation">
+            <li>[<a href="Homepage.html">home</a>]</li>
+            <li>[<a href="InputTags.html">search song</a>]</li>
+            <li>[<a href="AddSong.html">add song</a>]</li>
+        </ul>
+    </div>
 
-    </ul>
-
-    <div class="tab-content">
-        <div id="tab1" class="tab active">
-        </div>
-
-        <div id="tab2" class="tab">
-        </div>
-
-        <div id="tab3" class="tab">
-        </div>
-
-        <div id="tab4" class="tab">
-        </div>
 
         <div class="mainLogo">
             <div align="center" data-0="opacity:1;" data-top="opacity:0;">
-                <img src="{% static 'songtags/JPG/Hive Logo.png' %}" width="600" height="250"/>
+                <div align="center" class="logo"><a href="Homepage.html"><img src="{% static 'songtags/JPG/Hive Logo.png' %}" HEIGHT="250" WIDTH="600" BORDER="0"></a></div>
 
                 <h1>The New Way to Search Songs</h1>
             </div>
@@ -50,18 +35,13 @@
 
                             <p>Would you like to</p>
 
-                            <form method="get" action="{% url 'songtags:combinedsearch' %}"><input type="submit"
+                            <form method="get" action="InputTags.html"><input type="submit" class="tagbutton" 
                                                                               value="Search Songs by Inputting Tags">
                             </form>
                             <p>or</p>
 
-                            <form method="get" action="{% url 'songtags:combinedsearch' %}"><input type="submit"
-                                                                               value="Search Songs with Audio Files">
-                            </form>
-                            <p>or</p>
-
-                            <form method="get" action="Beekinator.html"><input type="submit"
-                                                                               value="Search Songs by Choosing Tags">
+                            <form method="get" action="AddSong.html"><input type="submit" class="tagbutton" 
+                                                                               value="Add a song to the Database">
                             </form>
                         </div>
                     </div>
