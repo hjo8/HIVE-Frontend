@@ -1,23 +1,24 @@
 <!doctype html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <link rel="stylesheet" type="text/css" href="css/HIVE.css">
-    <link rel="stylesheet" type="text/css" href="css/Range.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HIVE.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/Range.css' %}">
     <title>HiVe</title>
-    <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
+    <link rel="shortcut icon" href="{% static 'songtags/JPG/HIVE BEE ICON.png' %}">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 
-<div align="center" class="logo"><img src="JPG/Hive Logo.png" HEIGHT="250" WIDTH="600" BORDER="0"></div>
+<div align="center" class="logo"><img src="{% static 'songtags/JPG/Hive Logo.png' %}" HEIGHT="250" WIDTH="600" BORDER="0"></div>
 
 <br>
 
 <div align="center">
 
-    <form align="center">
+    <form align="center" method="get">
         <input type="text" id="tagstring" name="tags" class="tagsinput" size="70" maxlength="120"
                placeholder="Type in Tags" value=""><br><br>
         <table align="center">
@@ -46,7 +47,8 @@
 <div align="center">
     <p>or Upload a File</p>
 
-    <form action="demo_form.asp">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
         <input type="file" name="waveform" accept="">
         <input type="submit" value="UPLOAD" class="tagbutton">
     </form>
@@ -54,8 +56,7 @@
 
 
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="js/_main.js"></script>
-<script type="text/javascript" src="js/getTags.js"></script>
+<script type="text/javascript" src="{% static 'songtags/js/getTags.js' %}"></script>
 
 </body>
 </html>

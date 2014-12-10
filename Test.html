@@ -50,12 +50,12 @@
 
                             <p>Would you like to</p>
 
-                            <form method="get" action="InputTags.html"><input type="submit"
+                            <form method="get" action="{% url 'songtags:combinedsearch' %}"><input type="submit"
                                                                               value="Search Songs by Inputting Tags">
                             </form>
                             <p>or</p>
 
-                            <form method="get" action="SearchSong.html"><input type="submit"
+                            <form method="get" action="{% url 'songtags:combinedsearch' %}"><input type="submit"
                                                                                value="Search Songs with Audio Files">
                             </form>
                             <p>or</p>

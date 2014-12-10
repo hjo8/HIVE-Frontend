@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <link rel="stylesheet" type="text/css" href="css/HIVE.css">
-    <link rel="stylesheet" type="text/css" href="css/add.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/HIVE.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'songtags/css/add.css' %}">
     <title>HiVe</title>
     <link rel="shortcut icon" href="JPG/HIVE BEE ICON.png">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -20,11 +21,12 @@
 <body>
 <h1><a href="../index/">THE HIVE</a></h1><br><div style="margin-top: -50px"><br>
 
-<div align="center" class="logo"><img src="JPG/Hive Logo.png" HEIGHT="250" WIDTH="600" BORDER="0"></div>
+<div align="center" class="logo"><img src="{% static 'songtags/JPG/Hive Logo.png' %}" HEIGHT="250" WIDTH="600" BORDER="0"></div>
 
 
 <div align="center">
-    <form>
+    <form method="post">
+        {% csrf_token %}
         <input type='hidden' name='csrfmiddlewaretoken' value='VctFYgSpJCWNQSsbL3y4o6J6QTCu9kdS'/>
         <table>
             <tr>
@@ -50,6 +52,7 @@
         <br>
         <input type="submit" value="Add this song" class="tagbutton"/>
     </form>
+    {{ response }}
 </div>
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
