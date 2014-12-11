@@ -1,3 +1,9 @@
+function removePlaceholder(param) {
+    var elem = document.getElementById('placeholder' + param);
+    elem.parentNode.removeChild(elem);
+    return false;
+}
+
 $(document).ready(function(){
   $(".hexagon").click(function(){
     if (this.id == "song0") {
@@ -86,6 +92,77 @@ $.getJSON(url, function (json) {
     document.getElementById("song6").style.backgroundSize = "230px 230px";
 });
 
+var imageSearch;
+
+google.load('search', '1');
+
+function OnLoad() {
+      
+        // Create an Image Search instance.
+        imageSearch = new google.search.ImageSearch();
+
+        imageSearch.setRestriction(
+  google.search.ImageSearch.RESTRICT_IMAGESIZE,
+  google.search.ImageSearch.IMAGESIZE_MEDIUM);
+
+        // Set searchComplete as the callback function when a search is 
+        // complete.  The imageSearch object will have results in it.
+        imageSearch.setSearchCompleteCallback(this, searchComplete, ["song0"]);
+
+        //imageSearch.setSiteRestriction("wikipedia.org");
+
+        //Perform search
+        //imageSearch.execute("metallica metallica album art");
+        
+        // Include the required Google branding
+        google.search.Search.getBranding('branding');
+      }
+
+function searchComplete(value) {
+  // Check that we got results
+  if (imageSearch.results && imageSearch.results.length > 0) {
+
+    // Grab our content div, clear it.
+    var contentDiv = document.getElementById(value);
+
+    // Loop through our results, printing them to the page.
+    var result = imageSearch.results[0].url;
+    contentDiv.style.background = "url(" + result + ")" + " center center";
+    contentDiv.style.backgroundSize = "230px 230px";
+  }
+}
+
+google.setOnLoadCallback(OnLoad);
+
+function searchIndividual(value) {
+  imageSearch.setSearchCompleteCallback(this, searchComplete, [value]);
+  imageSearch.execute(document.getElementById(value+"name").innerHTML + " " + document.getElementById(value+"artist").innerHTML + " " + "album cover");
+  imageSearch.clearResults();
+}
+
+function doSearch() {
+  searchIndividual("song0");
+  imageSearch.clearResults();
+  searchIndividual("song1");
+  imageSearch.clearResults();
+  searchIndividual("song2");
+  imageSearch.clearResults();
+  searchIndividual("song3");
+  imageSearch.clearResults();
+  searchIndividual("song4");
+  imageSearch.clearResults();
+  searchIndividual("song5");
+  imageSearch.clearResults();
+  searchIndividual("song6");
+  imageSearch.clearResults();
+}
+
+imageSearch.execute("random image");
+var link = imageSearch.results[0].url;
+document.getElementById("song0").style.background = "url(" + link + ")" + " center center";
+document.getElementById("song0").style.backgroundSize = "230px 230px";
+
+
 /**
  function myFunction(arr) {
     var out = "";
@@ -97,7 +174,6 @@ $.getJSON(url, function (json) {
     document.getElementById("id01").innerHTML = out;
 }
  */
-
 
 /** to change on hover, also relocate id to div with text
  $(function(){

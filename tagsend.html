@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <!-- Load jQuery, jQuery UI and jQuery ui styles from jQuery website -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Source our javascript file with the jQUERY code -->
+    <link rel="stylesheet" type="text/css" href="css/HIVE.css">
+    <script language="javascript" type="text/javascript">
+    function addOption(selectbox,text,value )
+    {
+        var optn = document.createElement("OPTION");
+        optn.text = text;
+        optn.value = value;
+        selectbox.options.add(optn);
+    }
+
+    function dropdownlist(){
+        var song_list = {{ song_list|safe }};
+        for (var i=0; i < song_list.length;++i){
+            addOption(document.formname.songlist, song_list[i], song_list[i]);
+        }
+    }
+    </script>
+
+  </head>
+  <body onload="javascript: dropdownlist()";>
+  <div align="center">
+    <h1>Tag a song by {{ artistname }}</h1>
+    <form name="formname" action="{% url "usertags:selectandtagsong" %}" method="post">
+        <table>
+        <tr><td>
+        {% csrf_token %}
+        <input type="text" readonly="readonly" name="artistname" class="tagsinput" value="{{ artistname }}"/></td></tr>
+        <tr><td>Tags: <input type="text" name="tags" id="tags" class="tagsinput" size="40"/></td></tr>
+        <tr><td><label for="songs">Song: <select name="songlist" id="songlist" /></label></td></tr>
+        <tr><td><input type="submit" value="Tag the song!" class="tagbutton"/></td></tr>
+        </table>
+    </form>
+    </div>
+  </body>
+</html>

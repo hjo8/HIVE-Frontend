@@ -35,6 +35,10 @@ body {
 
 }
 
+table tr td {
+    text-align: center;
+}
+
 .dropdown tr td form input {
     float: left;
 }
